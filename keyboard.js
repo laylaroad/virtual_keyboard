@@ -1,5 +1,4 @@
 (() => {
-    'use strict';
     function e(e) {
         const t = e.color || "default",
             o = e.size || "1u", s = "object" == typeof e.key ? e.key.en : e.key,
@@ -130,10 +129,11 @@
             else "mouseup" !== n.type && "keyup" !== n.type || (this.state.caps = !this.state.caps, this.updateVirtualKeyboard())
         }
     }
-        ([[{ key: { en: "`", ru: "ё" }, code: "Backquote", altkey: { en: "~", ru: null } }, { key: "1", code: "Digit1", altkey: { en: "!" } },
+        ([[{ key: { en: "<", ru: "§" }, code: "Backquote", altkey: { en: "± §", ru: null } },
+        { key: "1", code: "Digit1", altkey: { en: "!" } },
         { key: "2", code: "Digit2", altkey: { en: "@", ru: '"' } },
         { key: "3", code: "Digit3", altkey: { en: "#", ru: "№" } },
-        { key: "4", code: "Digit4", altkey: { en: "$", ru: ";" } },
+        { key: "4", code: "Digit4", altkey: { en: "$", ru: "%" } },
         { key: "5", code: "Digit5", altkey: { en: "%" } },
         { key: "6", code: "Digit6", altkey: { en: "^", ru: ":" } },
         { key: "7", code: "Digit7", altkey: { en: "&", ru: "?" } },
@@ -143,7 +143,7 @@
         { key: "-", code: "Minus", altkey: { en: "_" } },
         { key: "=", code: "Equal", altkey: { en: "+" } },
         { key: "Backspace", code: "Backspace", color: "mod", size: "auto", icon: "⌫", system: !0 }],
-        [{ key: "\t", code: "Tab", color: "mod", size: "1_5u", icon: "⇥", system: !0 },
+        [{ key: "/t", code: "Tab", color: "mod", size: "1_5u", icon: "⇥", system: !0 },
         { key: { en: "q", ru: "й" }, code: "KeyQ" }, { key: { en: "w", ru: "ц" }, code: "KeyW" },
         { key: { en: "e", ru: "у" }, code: "KeyE" }, { key: { en: "r", ru: "к" }, code: "KeyR" },
         { key: { en: "t", ru: "е" }, code: "KeyT" }, { key: { en: "y", ru: "н" }, code: "KeyY" },
@@ -175,7 +175,7 @@
         { key: "command", code: "AltLeft", color: "mod", size: "1_25u", system: !0, noAction: !0 },
         { key: " ", code: "Space", size: "auto", icon: "", system: !0 },
         { key: "command", code: "AltRight", color: "mod", size: "1_25u", system: !0, noAction: !0 },
-        { key: "Ctrl", code: "ControlRight", color: "mod", size: "1_25u", system: !0, noAction: !0 },
+        { key: "option", code: "ControlRight", color: "mod", size: "1_25u", system: !0, noAction: !0 },
         { key: "←", code: "ArrowLeft", color: "mod", icon: "←", system: !0 },
         { key: "↓", code: "ArrowDown", color: "mod", icon: "↓", system: !0 },
         { key: "→", code: "ArrowRight", color: "mod", icon: "→", system: !0 }]]),
@@ -184,7 +184,6 @@
         r = document.createElement("div");
     a.className = "virtual-keyboard__textarea",
         i.className = "container", r.className = "info",
-        // r.innerHTML="Клавиатура создана в операционной системе <b>Windows</b><br>\nДля переключения языка комбинация: <kbd>ctrl + alt</kbd>",
         i.append(a), i.append(n.keyboard), i.append(r), document.body.append(i), n.setInput(a);
     const c = localStorage.getItem("lang") || "en";
     n.switchLang(c), a.focus()
