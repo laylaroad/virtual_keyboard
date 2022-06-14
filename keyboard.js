@@ -40,7 +40,7 @@
                         a.append(o)
                     } o.append(a)
                 }
-                return o
+                return o;
             }
                 (t), this.buttonSet = function (e) {
                     const t = {};
@@ -160,24 +160,25 @@
         { key: { en: "l", ru: "д" }, code: "KeyL" }, { key: { en: ";", ru: "ж" }, code: "Semicolon", altkey: { en: ":", ru: null } },
         { key: { en: "'", ru: "э" }, code: "Quote", altkey: { en: '"', ru: null } },
         { key: "\n", code: "Enter", color: "mod", size: "auto", icon: "↵", system: !0 }],
-        [{ key: "⇧", code: "ShiftLeft", color: "mod", size: "2_25u", system: !0 },
+        [{ key: "↑", code: "ArrowUp", color: "mod", size: "1_5u", icon: "↑", system: !0 },
         { key: { en: "z", ru: "я" }, code: "KeyZ" }, { key: { en: "x", ru: "ч" }, code: "KeyX" },
         { key: { en: "c", ru: "с" }, code: "KeyC" }, { key: { en: "v", ru: "м" }, code: "KeyV" },
         { key: { en: "b", ru: "и" }, code: "KeyB" }, { key: { en: "n", ru: "т" }, code: "KeyN" },
         { key: { en: "m", ru: "ь" }, code: "KeyM" }, { key: { en: ",", ru: "б" }, code: "Comma", altkey: { en: "<", ru: null } },
         { key: { en: ".", ru: "ю" }, code: "Period", altkey: { en: ">", ru: null } },
         { key: { en: "/", ru: "." }, code: "Slash", altkey: { en: "?", ru: "," } },
-        { key: "⇧", code: "ShiftRight", color: "mod", size: "auto", system: !0 },
-        { key: "↑", code: "ArrowUp", color: "mod", icon: "↑", system: !0 }],
-        [{ key: "control", code: "ControlLeft", color: "mod", size: "1_25u", system: !0, noAction: !0 },
+        { key: "↑", code: "ArrowUp", color: "mod", size: "3_5u", icon: "↑", system: !0 },
+        { key: "⇧", code: "ShiftRight", color: "mod", size: "2u", system: !0 }],
+        [{ key: "fn", code: "function", color: "mod", size: "1_25u", system: !0, noAction: !0 },
+        { key: "control", code: "ControlLeft", color: "mod", size: "1_25u", system: !0, noAction: !0 },
         { key: "option", code: "MetaLeft", color: "mod", size: "1_25u", system: !0, noAction: !0 },
         { key: "command", code: "AltLeft", color: "mod", size: "1_25u", system: !0, noAction: !0 },
         { key: " ", code: "Space", size: "auto", icon: "", system: !0 },
         { key: "command", code: "AltRight", color: "mod", size: "1_25u", system: !0, noAction: !0 },
         { key: "option", code: "ControlRight", color: "mod", size: "1_25u", system: !0, noAction: !0 },
-        { key: "←", code: "ArrowLeft", color: "mod", icon: "←", system: !0 },
-        { key: "↓", code: "ArrowDown", color: "mod", icon: "↓", system: !0 },
-        { key: "→", code: "ArrowRight", color: "mod", icon: "→", system: !0 }]]),
+        { key: "←", code: "ArrowLeft", color: "mod", size: "1.1u", icon: "←", system: !0 },
+        { key: "↓", code: "ArrowDown", color: "mod", size: "1.1u", icon: "↓", system: !0 },
+        { key: "→", code: "ArrowRight", color: "mod", size: "1.1u", icon: "→", system: !0 }]]),
         a = document.createElement("textarea"),
         i = document.createElement("div"),
         r = document.createElement("div");
@@ -187,3 +188,4 @@
     const c = localStorage.getItem("lang") || "en";
     n.switchLang(c), a.focus()
 })();
+
